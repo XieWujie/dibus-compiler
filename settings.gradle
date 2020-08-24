@@ -1,0 +1,2 @@
+include ':app', ':di-compiler'
+rootProject.name='dibus-compiler'

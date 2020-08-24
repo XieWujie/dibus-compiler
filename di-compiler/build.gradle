@@ -1,0 +1,73 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    kapt 'com.google.auto.service:auto-service:1.0-rc7'
+    implementation 'com.google.auto.service:auto-service:1.0-rc7'
+    //noinspection DifferentStdlibGradleVersion
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.72"
+    implementation 'com.squareup:javapoet:1.13.0'
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
+
+//apply plugin: 'maven'
+//apply plugin: 'signing'
+//
+//signing {
+//    sign configurations.archives
+//}
+//
+//group = "com.github.XieWujie"
+//archivesBaseName = "Di"
+//version = "0.1"
+
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            beforeDeployment {
+//                MavenDeployment deployment -> signing.signPom(deployment)
+//            }
+//
+//            repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
+//                authentication(userName: "xiewujie", password: "Gi_2017214319")
+//            }
+//
+//            snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
+//                authentication(userName: "xiewujie", password: "Gi_2017214319")
+//            }
+//
+//            pom.project {
+//                name 'Di'
+//                packaging 'aar'
+//                description 'This is a depend injection and event bus '
+//                url 'https://github.com/XieWujie/di-compiler.git'
+//                scm {
+//                    connection 'scm:git:https://github.com/XieWujie/di-compiler.git'
+//                    developerConnection 'scm:git:https://github.com/XieWujie/di-compiler.git'
+//                    url 'https://github.com/XieWujie/di-compiler.git'
+//                }
+//
+//                licenses {
+//                    license {
+//                        name 'The Apache License, Version 2.0'
+//                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//                    }
+//                }
+//
+//                developers {
+//                    developer {
+//                        id 'xiewujie'
+//                        name 'xiewujie'
+//                        email '1521897033@qq.com'
+//                    }
+//                }
+//            }
+//        }
+//    }
+//
+//
+//}
